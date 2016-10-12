@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <title>HTML Form Practice</title>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+
+        <h1>HTML Form Practice</h1>
+
+        <form method='POST' action='http://requestb.in/1lg1zrf1' enctype='multipart/form-data'>
+
+            <aside>
+                <label for='username'>Your Username:</label>
+                <input type='text' id='username' name='username'  placeholder='Username' required>
+            </aside>
+
+            <aside>
+                <label for='password'>Your Password:</label>
+                <input type='password' id='password' name='password'>
+            </aside>
+
+            <aside>
+                <textarea id='about-me' name='about-me'>My default text...</textarea>
+            </aside>
+
+            <aside>
+                <input type='radio' name='favorite-color' id='favorite-color-blue' value='blue'>
+                <label for='favorite-color-blue'>Blue</label>
+                <input type='radio' name='favorite-color' id='favorite-color-yellow' value='yellow'>
+                <label for='favorite-color-yellow'>Yellow</label>
+            </aside>
+
+            <aside>
+                <label for='avatar'>Avatar</label>
+                <input type='file' id='avatar'>
+            </aside>
+
+            <input type='submit' value='Send Info'>
+
+        </form>
+
+    </body>
+</html>
