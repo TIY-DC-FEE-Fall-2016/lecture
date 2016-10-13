@@ -1,0 +1,75 @@
+
+/* NAV styles */
+
+.avatar img {
+    border: 1px solid #ff0000;
+    position: absolute;  /* absolute to it's nearest positioned parent... or the body otherwise */
+    top: 0;
+    right: 100px;
+}
+
+.shadow {
+    z-index: 1;
+}
+.color {
+    z-index: 2;
+}
+body > nav:hover .color {
+    z-index: 0;
+}
+
+body > nav {
+    background-color: #ccccff;
+    position: relative;
+}
+
+body > nav li {
+    /*position: relative;*/
+    display: inline;
+}
+
+.avatar ~ li {
+    border: 1px solid #00ff00;
+}
+
+
+/* main text portion */
+
+.text p {
+    float: left;
+    width: 33%;
+}
+
+.text img, .text a {
+    border: 1px solid #0000ff;
+}
+/*.text a {
+    border: 1px solid #0000ff;
+}*/
+
+.text img {
+    display: block;
+    float: right;
+}
+.text a {
+    display: inline-block;
+    padding: 0.2em;
+    margin: 2em;
+}
+/*
+ This isn't working ... yet
+.text p:last-child img {
+    float: left;
+}*/
+
+.text nav {
+    float: right;
+    clear: left;
+}
+
+
+/* footer styles */
+
+footer {
+    clear: both;
+}
