@@ -1,0 +1,69 @@
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #ffcccc;
+    height: 100px;
+}
+h1 {
+    margin: 0;
+}
+
+
+
+main {
+    border: 1px solid #000099;
+    width: 80%;
+    margin: 0 auto;
+    background-color: red;
+}
+main::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+article {
+    background-color: #99cc99;
+    float: right;
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    float: right;
+    border: 1px solid #66bb66;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+/*
+This is a HACK!
+.clear-fix {
+    clear: both;
+}*/
+
+
+footer {
+    clear: both;
+    background-color: #9999cc;
+}
+footer .related {
+    margin: 0 auto;
+    width: 750px;
+}
+footer .related img {
+    display: block;
+    width: 150px;
+    float: left;
+    height: 150px;
+    background-color: yellow;
+}
+
+footer p {
+    clear: both;
+    margin: 0;
+}
