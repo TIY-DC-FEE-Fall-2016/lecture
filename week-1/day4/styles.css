@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+
+a.fa {
+    margin-left: 400px;
+    font-size: 3em;
+    color: #333333;
+    transition: all 0.3s linear;
+}
+a.fa:hover {
+    color: #999999;
+    transform: rotate(180deg);
+    /*font-size: 6em;*/
+}
+
+nav:hover ul.dropdown {
+    height: 3em;
+}
+
+nav ul.dropdown {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+
+header > h1 {
+    color: yellow;
+    font-family: 'Raleway', Arial, serif;
+}
+
+h1 {
+    color: blue;
+}
+
+h1 {
+    color: green;
+}
+
+header {
+    color: red;
+    height: 200px;
+    /*background-color: #99cc99;
+    background-image: url('http://www.placecage.com/1000/300');*/
+    background: #99cc99 url('http://www.placecage.com/1000/300') left center no-repeat;
+    margin: 50px 10px 30px 100px; /* top -> right -> bottom -> left */
+    /*margin: 30px 50px;*/ /* top and bottom, then left and right */
+}
