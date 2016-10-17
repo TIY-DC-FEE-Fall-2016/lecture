@@ -1,0 +1,46 @@
+
+a {
+    display: block;
+    width: 40%;
+}
+[href^='http:'] {  /* starts with */
+    border: 1px solid #ff0000;
+}
+
+h1 {
+    /*text-transform: uppercase;*/
+    font-variant: small-caps;
+}
+
+p {
+    letter-spacing: 0.2em;
+    line-height: 1.4em;
+}
+/* @media print ..... */
+
+/* tablet & desktop (shared) styles */
+@media screen and (min-width: 420px) {
+    p {
+        float: left;
+    }
+}
+
+/* tablet styles */
+@media screen and (min-width: 420px) and (max-width: 799px) {
+    p {
+        width: 50%;
+        border: 1px solid #99ff99;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        color: #ff9999;
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 800px) {
+    p {
+        width: 33%;
+    }
+}
