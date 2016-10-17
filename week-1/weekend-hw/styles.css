@@ -1,0 +1,88 @@
+
+main {
+    width: 1050px;
+    margin: 0 auto;
+}
+article {
+
+    width: 300px;
+    float: left;
+    margin: 25px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+article section {
+    border: 2px solid #AABBFF;
+    padding: 20px;
+    border-bottom: none;
+}
+
+article img {
+    width: 100%;
+}
+
+.shirtback {
+    width: 260px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+}
+
+article ul {
+    padding: 0;
+    margin: 0;
+}
+
+article li {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 20%;
+    border: 2px solid #aabbff;
+    border-left: none;
+    box-sizing: border-box;
+    position: relative;
+    height: 50px;
+}
+
+article li:hover .submenu{
+    opacity: 1;
+    bottom: 60px;
+}
+
+article li:first-child {
+    border-left: 2px solid #aabbff;
+}
+
+.submenu {
+    border:2px solid #aabbff;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: all 0.3s linear;
+    width: 100%;
+}
+.submenu::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 2px solid #aabbff;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-left: none;
+    border-top: none;
+}
+
+
+.submenu li {
+    border: none;
+}
