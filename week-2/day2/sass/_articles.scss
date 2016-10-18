@@ -1,0 +1,23 @@
+
+article {
+    float: left;
+    width: $largePageWidth / $largeLayoutArticleCount - ($largeLayoutArticleSpacing * 2);
+    margin: $largeLayoutArticleSpacing;
+
+    &.special { /*  becomes: "article.special"  */
+        font-weight: bold;
+    }
+
+    h2 {  /*  this becomes:  "article h2"  */
+        color: $themeColor;
+    }
+
+    p {
+        line-height: 1.8em;
+
+        a {
+            border: 1px solid #ff0000;
+        }
+    }
+
+}

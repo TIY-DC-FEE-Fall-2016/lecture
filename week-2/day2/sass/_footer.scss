@@ -1,0 +1,8 @@
+
+footer {
+
+    li {
+        @include square(75px);
+    }
+
+}

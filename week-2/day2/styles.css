@@ -1,0 +1,34 @@
+header {
+  border: 2px solid #6666cc; }
+  header h1 {
+    color: #6666cc; }
+  header nav li {
+    width: 150px;
+    height: 150px;
+    background-color: #ff9999;
+    border: 10px solid #99ff99; }
+
+article {
+  float: left;
+  width: 350px;
+  margin: 25px; }
+  article.special {
+    /*  becomes: "article.special"  */
+    font-weight: bold; }
+  article h2 {
+    /*  this becomes:  "article h2"  */
+    color: #6666cc; }
+  article p {
+    line-height: 1.8em; }
+    article p a {
+      border: 1px solid #ff0000; }
+
+footer li {
+  width: 75px;
+  height: 75px;
+  background-color: #ff9999;
+  border: 2px solid #99ff99; }
+
+/* put media queries down here */
+
+/*# sourceMappingURL=styles.css.map */

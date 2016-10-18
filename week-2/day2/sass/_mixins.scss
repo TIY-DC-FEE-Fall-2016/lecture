@@ -1,0 +1,11 @@
+
+@mixin square($size, $borderSize: 2px) {
+    width: $size;
+    height: $size;
+    background-color: #ff9999;
+    border: $borderSize solid #99ff99;
+}
+
+@mixin otherone {
+    /* other code */
+}
