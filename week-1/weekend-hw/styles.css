@@ -19,8 +19,19 @@ article section {
     border-bottom: none;
 }
 
+article section:hover .shirtback {
+    z-index: 1;
+    transform: rotateY(0deg);
+}
+article section:hover .shirtfront {
+    transform: rotateY(180deg);
+}
+
 article img {
     width: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.4s linear;
 }
 
 .shirtback {
@@ -29,6 +40,7 @@ article img {
     top: 20px;
     left: 20px;
     z-index: -1;
+    transform: rotateY(180deg);
 }
 
 article ul {
