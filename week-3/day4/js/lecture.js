@@ -46,5 +46,33 @@
         });
 
 
+    console.log( document.querySelector('ul').innerHTML );
+
+
+    function addItem(text) {
+        var item = document.createElement('li');
+        item.innerText = text;
+        item.classList.add('new-item');
+        document.querySelector('ul').appendChild(item);
+        item.style.color = '#9999ff';
+        item.setAttribute('id', Date.now());
+    }
+
+    document
+        .querySelector('.add-item')
+        .addEventListener('click', function handleAddItemClick() {
+            // (new Date()).getTime()
+            addItem('A new item ' + Date.now() );  // shortcut for line above
+        });
+    document
+        .querySelector('.remove-item')
+        .addEventListener('click', function handleRemoveItem() {
+            // document.querySelector('li:last-child')
+            var allItems = document.querySelectorAll('li');
+            allItems[allItems.length-1]
+                .parentNode
+                .removeChild(allItems[allItems.length-1]);
+        });
+
 
 })();
