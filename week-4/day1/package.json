@@ -1,0 +1,9 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "author": "Jordan Kasper",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
