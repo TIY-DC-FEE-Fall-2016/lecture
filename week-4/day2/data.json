@@ -1,0 +1,7 @@
+
+{
+    "foo": "bar",
+    "isCool": true,
+    "studentCount": 10,
+    "names": [ "josiah", "navi", "alex", "steph" ]
+}
