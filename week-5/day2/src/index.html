@@ -7,6 +7,7 @@
         <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
         <style>
             main {
+                display: none;
                 width: 80%;
                 margin: 1em auto;
             }
@@ -24,9 +25,9 @@
 
         <nav>
             <ul class='nav nav-tabs'>
-                <li><a href='#'>Link 1</a></li>
-                <li class='active'><a href='#'>Link 2</a></li>
-                <li><a href='#'>Link 3</a></li>
+                <li><a href='#welcome'>Home</a></li>
+                <li><a href='#list-stuff'>List Stuff</a></li>
+                <li><a href='#create-stuff'>Create Stuff</a></li>
             </ul>
         </nav>
 
@@ -38,7 +39,7 @@
             </ul>
         </nav> -->
 
-        <main class='panel panel-primary'>
+        <main id='welcome' class='panel panel-primary'>
 
             <p class='panel-heading'>
                 Welcome to my site!
@@ -73,6 +74,15 @@
 
         </main>
 
+        <main id='list-stuff'>
+            <h2>Listing My Stuff</h2>
+        </main>
+
+        <main id='create-stuff'>
+            <h2>Creating New Stuff</h2>
+        </main>
+
+        <script src='js/nav.js'></script>
 
     </body>
 </html>
