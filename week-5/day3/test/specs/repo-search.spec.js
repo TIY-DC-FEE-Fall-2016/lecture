@@ -28,7 +28,7 @@
                         expect(data.items).to.be.an('array');
                         doneCallback();  // tell mocha our test is complete
                     })
-                    .fail(function handleFailure(xhr) {
+                    .fail(function handleFailure() {
                         // expect(false).to.be.true;  // if I need to force a failure
                           // tell mocha our test is complete
                           // and that there was a problem

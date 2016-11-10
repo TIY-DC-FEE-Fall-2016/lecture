@@ -25,7 +25,11 @@
         <!-- my test code -->
         <script src='specs/repo-search.spec.js'></script>
 
-        <script>mocha.run();</script>
+        <script>
+        if (window.navigator.userAgent.indexOf('PhantomJS') < 0) {
+            mocha.run();
+        }
+        </script>
 
     </body>
 </html>
