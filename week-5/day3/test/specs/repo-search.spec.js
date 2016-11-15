@@ -15,7 +15,7 @@
 
         describe('search repos', function() {
 
-            it('should make an ajax call with a search term', function(doneCallback) {
+            xit('should make an ajax call with a search term', function(doneCallback) {
                 // hold onto the return value from the Ajax call
                 var xhrPromise = window.repos.searchRepos('jordan');
                 expect(xhrPromise).to.be.an('object');
