@@ -9,8 +9,8 @@
                 // if I get here, then sum() did NOT throw an error
                 expect(true).to.be.false;
             } catch(err) {
-                expect(err).to.be.an('object');
-                expect(err).to.be.an.instanceof('TypeError');
+                expect(err).to.be.an.instanceof(Object);
+                expect(err).to.be.an.instanceof(TypeError);
             }
         });
 
@@ -20,8 +20,8 @@
                 // if I get here, then sum() did NOT throw an error
                 expect(true).to.be.false;
             } catch(err) {
-                expect(err).to.be.an('object');
-                expect(err).to.be.an.instanceof('SyntaxError');
+                expect(err).to.be.an.instanceof(Object);
+                expect(err).to.be.an.instanceof(SyntaxError);
             }
         });
 
