@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='lecture'>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular!</title>
+    </head>
+    <body>
+
+        <h1>Angular!</h1>
+
+        <p>One plus one plus one is {{ 1 + 1 + 1 }}</p>
+
+        <main ng-controller='EmailController as inbox'>
+            <!-- "inbox" is ONLY accessible within these <main> tags -->
+
+            <h2>Welcome {{ inbox.name }}, today is {{ inbox.getShortDate() }}</h2>
+
+            <p>You have {{ inbox.unreadCount }} unread messages.</p>
+
+            <button ng-click='inbox.incrementCount()'>Add email</button>
+
+            <ul>
+                <li ng-class='{ highPriority: (email.sender === "Steph"), item: true }'
+                    ng-hide='email.sender === "Navi"'
+                    ng-repeat='email in inbox.emails | limitTo:5 | orderBy:inbox.emailSortOrder'>
+                    <cite>From {{ email.sender }}</cite>
+                    <h3>subject: {{ email.subject }}</h3>
+                    <h4>sent on: {{ email.time | date:"M/d/y" }}</h4>
+                </li>
+            </ul>
+        </main>
+
+        <footer ng-controller='EmailController as email'>
+            <p>There are {{ email.unreadCount }} messages waiting.</p>
+
+            <button ng-click='email.incrementCount()'>Add email</button>
+        </footer>
+
+        <script src='node_modules/angular/angular.js'></script>
+        <script src='js/lecture.module.js'></script>
+        <script src='js/email.controller.js'></script>
+
+    </body>
+</html>
