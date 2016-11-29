@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app='movies'>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Day 2 (w7d2)</title>
+
+        <style>
+            [ng-cloak] {
+                display: none;
+            }
+            /*input:invalid, select:invalid {
+                border: 1px solid red;
+            }*/
+            .ng-invalid.ng-touched {
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1>BrickBuster Movies</h1>
+        </header>
+
+        <main ng-controller='CollectionController as collection'>
+            <form
+                novalidate
+                name='addMovie'
+                class='add-movie'
+                ng-submit='addMovie.$valid && collection.addMovie(collection.movieToAdd)'>
+
+                <h2>Add Movie</h2>
+
+                <p ng-show='addMovie.title.$touched && !addMovie.title.$valid'>
+                    Please enter a title!
+                </p>
+
+                <input
+                    type='text'
+                    name='title'
+                    placeholder='Movie title'
+                    required
+                    ng-model='collection.movieToAdd.title'>
+
+                <select ng-cloak name='genre' ng-controller='GenreController as genres' ng-model='collection.movieToAdd.genreId'>
+                    <option ng-repeat='genre in genres.list' value='{{ genre.id }}'>
+                        {{ genre.name }}
+                    </option>
+                </select>
+
+                <p>
+                    Movie to be added: {{collection.movieToAdd.title}}
+                </p>
+
+                <input type='submit'>
+            </form>
+
+            <ul ng-cloak ng-controller='GenreController as genres'>
+                <li ng-repeat='movie in collection.movies'>
+                    {{movie.title}} ({{  genres.getGenreById(movie.genreId)  }})
+                </li>
+            </ul>
+        </main>
+
+
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js'></script>
+        <script>
+            if (typeof(angular) === 'undefined') {
+                console.log('including local copy');
+                var ngScriptTag = document.createElement('script');
+                ngScriptTag.setAttribute('src', 'node_modules/angular/angular.js');
+                document.write(ngScriptTag.outerHTML);
+            }
+        </script>
+
+        <script src='js/movies.module.js'></script>
+        <script src='js/genre.controller.js'></script>
+        <script src='js/collection.controller.js'></script>
+
+    </body>
+</html>
