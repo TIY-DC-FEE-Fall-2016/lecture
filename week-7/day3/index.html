@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='school'>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Services</title>
+    </head>
+    <body>
+
+        <h1>School Registrar</h1>
+
+        <main ng-controller='RegistrarController as registrar'>
+            <form name='addStudent' ng-submit='registrar.add(registrar.newStudent)'>
+                <input type='text' name='studentName' ng-model='registrar.newStudent.name'>
+                <input type='number' name='grade' ng-model='registrar.newStudent.grade'>
+                <input type='submit'>
+            </form>
+            <ul>
+                <li ng-repeat='student in registrar.all'>
+                    {{student.name}}, {{student.id}}, {{student.grade}}, {{student.paid}}
+                </li>
+            </ul>
+        </main>
+
+        <main ng-controller='FinanceController as finance'>
+            <form name='something' ng-submit='finance.markPaid(finance.payStatus.id)'>
+                <p ng-show='finance.message'>
+                    {{finance.message}}
+                </p>
+                ID: <input type='text' name='id' ng-model='finance.payStatus.id'>
+                <input type='submit' value='Mark as Paid'>
+            </form>
+        </main>
+
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js'></script>
+        <script src='js/school.module.js'></script>
+        <script src='js/registrar.controller.js'></script>
+        <script src='js/student.service.js'></script>
+        <script src='js/finance.controller.js'></script>
+
+    </body>
+</html>
