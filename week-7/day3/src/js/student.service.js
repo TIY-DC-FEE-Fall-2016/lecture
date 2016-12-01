@@ -6,7 +6,7 @@
         .factory('StudentService', StudentService);
 
     function StudentService() {
-        console.log('creating student service');
+        // console.log('creating student service');
 
         var students = [];
 
@@ -23,7 +23,15 @@
             return students;
         }
 
+        /**
+         * Adds a student to the "database"
+         * @param {Object} student Must have name and grade
+         */
         function add(student) {
+            if (!student || !student.name || !student.grade) {
+                return;
+            }
+
             students.push({
                 id: Date.now(),
                 name: student.name,
