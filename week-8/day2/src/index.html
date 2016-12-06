@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='gitstuff'>
+    <head>
+        <meta charset='utf-8'>
+        <title>GitStuff</title>
+    </head>
+    <body>
+        <h1>GitStuff</h1>
+
+        <nav>
+            <ul>
+                <li><a ui-sref='home'>Home</a></li>
+                <li><a ui-sref='repoList'>Repo List</a></li>
+            </ul>
+        </nav>
+
+        <main ui-view></main>
+
+        <footer>
+            <p>&copy; me</p>
+        </footer>
+
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js'></script>
+        <script src='js/gitstuff.module.js'></script>
+
+        <script src='js/repolist.controller.js'></script>
+        <script src='js/repo.service.js'></script>
+
+    </body>
+</html>
