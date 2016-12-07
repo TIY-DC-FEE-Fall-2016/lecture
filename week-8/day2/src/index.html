@@ -7,10 +7,12 @@
     <body>
         <h1>GitStuff</h1>
 
-        <nav>
+        <nav ng-controller='NavController as nav'>
             <ul>
                 <li><a ui-sref='home'>Home</a></li>
-                <li><a ui-sref='repoList'>Repo List</a></li>
+                <li ng-if='!nav.isLoggedIn()'><a ui-sref='login'>Login</a></li>
+                <li ng-if='nav.isLoggedIn()'><a ng-click='nav.logout()'>Logout</a></li>
+                <li ng-if='nav.isLoggedIn()'><a ui-sref='repoList'>Repo List</a></li>
             </ul>
         </nav>
 
@@ -25,6 +27,9 @@
         <script src='js/gitstuff.module.js'></script>
 
         <script src='js/repolist.controller.js'></script>
+        <script src='js/RepoDetail.controller.js'></script>
+        <script src='js/login.controller.js'></script>
+        <script src='js/nav.controller.js'></script>
         <script src='js/repo.service.js'></script>
 
     </body>

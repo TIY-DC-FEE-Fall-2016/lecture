@@ -1,5 +1,11 @@
+
+<aside ui-view></aside>
+
 <ul>
     <li ng-repeat='repo in repoList.repos'>
-        <h3>{{repo.name}}</h3>
+        <h3>
+            <a ui-sref='repoList.detail({ user: repo.owner.login, reponame: repo.name })'>{{repo.name}}</a>
+            by {{repo.owner.login}}
+        </h3>
     </li>
 </ul>
