@@ -46,7 +46,10 @@
                 url: '/login',
                 templateUrl: 'views/login.template.html',
                 controller: 'LoginController',
-                controllerAs: 'login'
+                controllerAs: 'login',
+                params: {
+                    message: null
+                }
             });
 
     }
@@ -59,7 +62,9 @@
             if (toState.doYouNeedToBeLoggedInForThisState &&
                 !RepoService.isLoggedIn()) {
                 event.preventDefault();
-                $state.go('login');
+                $state.go('login', {
+                    message: 'You need to log in before accessing the ' + toState.name + ' page.'
+                });
             }
         });
     }

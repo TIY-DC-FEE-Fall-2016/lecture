@@ -1,6 +1,10 @@
 
 <h2>Login</h2>
 
+<p ng-if='login.message'>
+    {{login.message}}
+</p>
+
 <form name='loginForm' ng-submit='loginForm.$valid && login.login(login.loginDeets.token)'>
     <input type='text' name='token' placeholder='API token' ng-model='login.loginDeets.token'>
     <input type='submit' value='Login'>

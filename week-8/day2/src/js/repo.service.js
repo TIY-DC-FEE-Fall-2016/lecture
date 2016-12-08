@@ -4,9 +4,9 @@
     angular.module('gitstuff')
         .factory('RepoService', RepoService);
 
-    RepoService.$inject = [ '$http' ];
+    RepoService.$inject = [ '$http', '$q' ];
 
-    function RepoService($http) {
+    function RepoService($http, $q) {
         console.log('creating service');
         // can't inject stuff here, I'm already in the function!!
 
@@ -63,9 +63,18 @@
             });
         }
 
+        /**
+         * Gets repo data from GitHub withj a username and reponame
+         * that is provided. Transforms the response from angular
+         * to only return data in the promise callback
+         *
+         * @param  {String} username Github username that has the given reponame
+         * @param  {String} reponame Github reponame that belongs to the username
+         * @return {Promise}         Ajax call promise with transformed data (not the full repsonse)
+         */
         function getRepo(username, reponame) {
             if (!username || !reponame) {
-                // uh oh!
+                return $q.reject( new Error('You must provide a username and reponame to get repo details') );
             }
 
             return $http({

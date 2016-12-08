@@ -1,0 +1,9 @@
+
+<article class='single-repo-detail'>
+    <h3>
+        <a ui-sref='repoList.detail({ user: repo.owner.login, reponame: repo.name })'>{{repo.name}}</a>
+    </h3>
+    <cite>by {{repo.owner.login}}</cite>
+    <h4>Forks: {{repo.forks}}</h4>
+    <h4 ng-if='stars'>Stars: {{stars}}</h4>
+</article>

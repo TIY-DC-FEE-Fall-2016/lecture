@@ -4,11 +4,12 @@
     angular.module('gitstuff')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = [ '$state', 'RepoService' ];
+    LoginController.$inject = [ '$stateParams', '$state', 'RepoService' ];
 
-    function LoginController($state, RepoService) {
+    function LoginController($stateParams, $state, RepoService) {
 
         this.loginDeets = {};
+        this.message = $stateParams.message;
 
         /**
          * [login description]
