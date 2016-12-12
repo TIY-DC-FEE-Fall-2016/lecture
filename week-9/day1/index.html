@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='app'>
+    <head>
+        <meta charset='utf-8'>
+        <title>LAST DAY OF ANGULAR!</title>
+        <style>
+            /* I would put these styles in a my-time.sass file */
+            .clock {
+                border: 1px solid #000000;
+                border-radius: 50%;
+                text-align: center;
+                padding-top: 4em;
+                box-sizing: border-box;
+                height: 150px;
+                width: 150px;
+                background-color: #123;  // #112233
+            }
+            .clock time {
+                color: #ffffff;
+            }
+
+            .details {
+                border: 1px solid #933;
+            }
+            .details h4 {
+                background-color: #fee;
+            }
+            .details main {
+                background-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Week 9 Day 1</h1>
+
+        <!-- <my-time format='"(HH:mm:ss a)"'></my-time> -->
+        <!-- <my-time format='"HH:mm"'></my-time> -->
+
+        <article ng-controller='InstructorView as instructor'>
+            <h3>Jordan Kasper</h3>
+            <h4>Instructor</h4>
+            <button>Show Details</button>
+
+            <aside detail bar='instructor.name' close-detail='instructor.close()'>
+                <h5>Courses: {{instructor.course | reverse:true}}</h5>
+                <h5>Hire Date: {{instructor.hireDate}}</h5>
+                <button ng-click='instructor.remove()'>Delete Person</button>
+            </aside>
+
+            <ul>
+                <li ng-repeat='course in instructor.courses | addstars'>
+                    {{course}}
+                </li>
+            </ul>
+        </article>
+
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js'></script>
+        <script src='app.module.js'></script>
+        <script src='my-time.directive.js'></script>
+        <script src='detail.directive.js'></script>
+        <script src='instructor-view.controller.js'></script>
+        <script src='reverse.filter.js'></script>
+        <script src='addstars.filter.js'></script>
+    </body>
+</html>
