@@ -1,0 +1,15 @@
+{
+  "name": "node-basics",
+  "version": "1.0.0",
+  "description": "A little app to practice our Node skillzzzz",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"TODO: write some tests\" && exit 1",
+    "build": "echo \"do the build stuff\""
+  },
+  "author": "Jordan Kasper (jordan.kasper@theironyard.com)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.1"
+  }
+}
